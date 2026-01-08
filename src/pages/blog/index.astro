@@ -12,6 +12,22 @@ const posts = (await getCollection('blog')).sort(
 <Layout title="Блог - NetFreedom">
 	<section class="max-w-4xl mx-auto px-4 py-12">
 		<h1 class="text-4xl font-bold mb-12 text-center text-white">База знаний</h1>
+
+		<!-- Категории -->
+		<div class="flex flex-wrap justify-center gap-4 mb-12">
+			<a href="/blog" class="px-6 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
+				Все
+			</a>
+			<a href="/blog/reviews" class="px-6 py-2 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700 hover:border-blue-500 hover:text-white transition">
+				Обзоры
+			</a>
+			<a href="/blog/guides" class="px-6 py-2 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700 hover:border-blue-500 hover:text-white transition">
+				Гайды
+			</a>
+			<a href="/blog/general" class="px-6 py-2 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700 hover:border-blue-500 hover:text-white transition">
+				Разное
+			</a>
+		</div>
 		
 		<div class="space-y-8">
 			{posts.map((post) => (
