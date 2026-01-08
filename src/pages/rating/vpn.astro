@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+
+// VPN Data
+const vpnServices = [
+    {
+        title: "CyberShield VPN",
+        price: "от $2.50/мес",
+        rating: 9.8,
+        logo: "https://cdn-icons-png.flaticon.com/512/2099/2099238.png", // Placeholder icon
+        reviewUrl: "/reviews/cybershield",
+        description: "Лучший выбор для полной анонимности. No-logs policy, серверы в 90 странах."
+    },
+    {
+        title: "StealthGuard",
+        price: "от $3.99/мес",
+        rating: 9.5,
+        logo: "https://cdn-icons-png.flaticon.com/512/3665/3665923.png", // Placeholder icon
+        reviewUrl: "/reviews/stealthguard",
+        description: "Идеален для обхода DPI. Специальные обфусцированные серверы."
+    },
+    {
+        title: "FastNet Proxy",
+        price: "Бесплатно / $1.00",
+        rating: 8.2,
+        logo: "https://cdn-icons-png.flaticon.com/512/1006/1006567.png", // Placeholder icon
+        reviewUrl: "/reviews/fastnet",
+        description: "Простое решение для смены IP в браузере. Высокая скорость."
+    },
+    {
+        title: "IronWall Security",
+        price: "от $5.00/мес",
+        rating: 9.9,
+        logo: "https://cdn-icons-png.flaticon.com/512/2431/2431836.png", // Placeholder icon
+        reviewUrl: "/reviews/ironwall",
+        description: "Корпоративный уровень защиты. Double VPN и поддержка Tor."
+    },
+    {
+        title: "StreamUnblocker",
+        price: "от $2.30/мес",
+        rating: 8.9,
+        logo: "https://cdn-icons-png.flaticon.com/512/2859/2859727.png", // Placeholder icon
+        reviewUrl: "/reviews/stream",
+        description: "Оптимизирован для Netflix и YouTube в 4K. Никаких буферизаций."
+    },
+    {
+        title: "GhostVPN",
+        price: "от $1.99/мес",
+        rating: 7.5,
+        logo: "https://cdn-icons-png.flaticon.com/512/2311/2311993.png", // Placeholder icon
+        reviewUrl: "/reviews/ghost",
+        description: "Самый дешевый вариант на рынке. Базовая защита."
+    }
+];
+---
+
+<Layout title="Рейтинг лучших VPN 2026" description="Независимый рейтинг VPN сервисов. Тесты скорости, проверка на утечки и обход блокировок.">
+    <section class="max-w-6xl mx-auto">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                Топ <span class="text-cyber-primary">VPN Сервисов</span> 2026
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                Мы протестировали более 50 провайдеров, чтобы отобрать тех, кто реально защищает ваши данные и не боится блокировок.
+            </p>
+        </header>
+
+        <!-- Filters (Visual Placeholder) -->
+        <div class="flex flex-wrap gap-4 justify-center mb-12">
+            <button class="px-6 py-2 bg-cyber-primary text-cyber-black font-bold rounded-full shadow-[0_0_15px_rgba(0,255,157,0.3)]">Все</button>
+            <button class="px-6 py-2 bg-cyber-gray border border-white/10 text-white rounded-full hover:border-cyber-primary transition-colors">Бесплатные</button>
+            <button class="px-6 py-2 bg-cyber-gray border border-white/10 text-white rounded-full hover:border-cyber-primary transition-colors">Для Netflix</button>
+            <button class="px-6 py-2 bg-cyber-gray border border-white/10 text-white rounded-full hover:border-cyber-primary transition-colors">С обфускацией</button>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {vpnServices.map(service => (
+                <ServiceCard {...service} />
+            ))}
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="mt-20 border-t border-white/5 pt-16">
+            <h2 class="text-3xl font-bold text-white mb-10 text-center">Частые вопросы</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-cyber-gray p-8 rounded-2xl border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-3">Какой VPN самый быстрый?</h3>
+                    <p class="text-gray-400">На 2026 год лидером по скорости является протокол WireGuard. Мы рекомендуем CyberShield или IronWall, так как они имеют самую широкую сеть серверов.</p>
+                </div>
+                <div class="bg-cyber-gray p-8 rounded-2xl border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-3">Безопасны ли бесплатные VPN?</h3>
+                    <p class="text-gray-400">Чаще всего нет. Если вы не платите за товар, значит товар — это вы. Бесплатные сервисы часто продают ваши логи рекламным сетям.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+</Layout>
