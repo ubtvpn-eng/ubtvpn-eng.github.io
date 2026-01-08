@@ -1,13 +1,13 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
 export default defineConfig({
-    // Замените на ваш адрес GitHub Pages, например: https://username.github.io
-    site: 'https://ubtvpn-eng.github.io',
-    // Замените на название вашего репозитория, например: /my-repo
+    // Замените на точное название вашего репозитория!
+    // Если репозиторий называется 'ubtvpn1', то пишем '/ubtvpn1'
     base: '/ubtvpn1',
+
+    // Ваша ссылка на GitHub Pages
+    site: 'https://ubtvpn-eng.github.io',
 
     integrations: [tailwind()],
 });
