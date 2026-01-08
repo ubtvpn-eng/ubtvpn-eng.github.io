@@ -8,7 +8,7 @@ from slugify import slugify # pip install python-slugify
 GOOGLE_API_KEY = "AIzaSyDgYOAYZzz97fdbOiG7Ew00eoDjInrqcak" 
 
 # Используем модель 1.5 Flash (она быстрая, дешевая/бесплатная и актуальная)
-MODEL_NAME = "gemini-1.5-flash"
+MODEL_NAME = "gemini-3-flash"
 
 # Папка для контента
 BASE_OUTPUT_DIR = "../src/content/blog"
