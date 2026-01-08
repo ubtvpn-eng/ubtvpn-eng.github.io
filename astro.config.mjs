@@ -7,7 +7,7 @@ export default defineConfig({
     base: '/ubtvpn1',
 
     // Ваша ссылка на GitHub Pages
-    site: 'https://ubtvpn-eng.github.io',
+    site: 'https://ubtvpn-eng.github.io/ubtvpn1',
 
     integrations: [tailwind()],
 });
